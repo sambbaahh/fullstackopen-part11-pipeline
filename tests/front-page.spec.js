@@ -14,6 +14,7 @@ test.describe("Simple tests", () => {
     await page.getByRole("button", { name: "create" });
     await page.locator("[name='content']").fill("");
 
-    await expect(page.getByText("Testing with PlayWright")).toBeVisible();
+    await page.waitForSelector('div:has-text("Testing with PlayWright")');
+    await expect(page.locator('div:has-text("Testing with PlayWright")')).toBeVisible();
   });
 });
