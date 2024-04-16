@@ -5,12 +5,12 @@ export default defineConfig({
     {
       command: "npm run start-frontend",
       url: "http://127.0.0.1:5173",
-      timeout: 15 * 1000,
+      timeout: 120 * 1000,
     },
     {
       command: "npm run start-backend",
       url: "http://127.0.0.1:5000",
-      timeout: 15 * 1000,
+      timeout: 120 * 1000,
     },
   ],
   use: { baseURL: "http://127.0.0.1:5173" },
