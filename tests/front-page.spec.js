@@ -1,6 +1,6 @@
-import { test, describe, expect } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 
-describe("Simple tests", () => {
+test.describe("Simple tests", () => {
   test("front page can be opened", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByText("Anecdotes")).toBeVisible();
