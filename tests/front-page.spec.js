@@ -13,8 +13,7 @@ test.describe("Simple tests", () => {
     await page.locator("[name='content']").fill("Testing with PlayWright");
     await page.getByRole("button", { name: "create" }).click();
     await page.locator("[name='content']").fill("");
-
-    await page.waitForSelector('div:has-text("Testing with PlayWright")');
-    await expect(page.locator('div:has-text("Testing with PlayWright")')).toBeVisible();
+    
+    await expect(page.getByText('Testing with PlayWright', { exact: true })).toBeVisible();
   });
 });
