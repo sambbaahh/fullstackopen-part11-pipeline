@@ -11,7 +11,7 @@ test.describe("Simple tests", () => {
     await page.goto("/");
 
     await page.locator("[name='content']").fill("Testing with PlayWright");
-    await page.getByText("click").click();
+    await page.getByText("create").click();
     await page.locator("[name='content']").fill("");
 
     await expect(page.getByText("Testing with PlayWright")).toBeVisible();
